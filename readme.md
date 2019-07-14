@@ -20,10 +20,10 @@ in the return of your method you want it to return:
 public function User {
 	//return success
 	$json = //my object
-	Response::json(ResponseUtil::makeResponse('DONE', $json), Response::HTTP_OK);
+	return Response::json(ResponseUtil::makeResponse('DONE', $json), Response::HTTP_OK);
 	
 	//return error
 	$json = //my object
-	Response::json(ResponseUtil::makeError('NOT_FOUND', $json), Response::HTTP_NOT_FOUND);
+	return Response::json(ResponseUtil::makeError('NOT_FOUND', $json), Response::HTTP_NOT_FOUND);
 }
 ```
